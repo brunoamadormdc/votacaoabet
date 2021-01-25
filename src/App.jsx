@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Routes from './routes/routes'
+import Logobox from './components/logobox/logobox'
+import Container from 'react-bootstrap/Container'
+import { BrowserRouter } from 'react-router-dom'
+
+const logo = "https://abet.com.br/abet/wp-content/uploads/2020/10/Logo-e-Selo-Site.png";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+        <Container fluid>
+          <Logobox imagem = {logo} title="Votação ABET 2021" /> 
+          <Routes />
+        </Container>
+    </BrowserRouter>
   );
 }
 
