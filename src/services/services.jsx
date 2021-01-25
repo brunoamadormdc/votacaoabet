@@ -35,7 +35,6 @@ export function Login(cpf,password) {
         })
     })
   }
-
   export function Votar(cpf,nome,voto) {
       const obj = {
           cpf:cpf,
